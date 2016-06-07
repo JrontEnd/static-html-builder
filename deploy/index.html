@@ -8,7 +8,7 @@
   
   
   
-  <title>推荐模块 - Static HTML Builder</title>
+  <title>应用部署 - Static HTML Builder</title>
   
 
   <link rel="shortcut icon" href="../img/favicon.ico">
@@ -23,9 +23,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "推荐模块";
-    var mkdocs_page_input_path = "recommend.md";
-    var mkdocs_page_url = "/recommend/";
+    var mkdocs_page_name = "应用部署";
+    var mkdocs_page_input_path = "deploy.md";
+    var mkdocs_page_url = "/deploy/";
   </script>
   
   <script src="../js/jquery-2.1.1.min.js"></script>
@@ -93,19 +93,25 @@
 <li>
           
             <li>
-    <li class="toctree-l1 ">
-        <a class="" href="../deploy/">应用部署</a>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">应用部署</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#_1">配置</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#_2">发布</a></li>
+                
+            
+            </ul>
         
     </li>
 <li>
           
             <li>
-    <li class="toctree-l1 current">
-        <a class="current" href="./">推荐模块</a>
-        
-            <ul>
-            
-            </ul>
+    <li class="toctree-l1 ">
+        <a class="" href="../recommend/">推荐模块</a>
         
     </li>
 <li>
@@ -146,7 +152,7 @@
     
       
     
-    <li>推荐模块</li>
+    <li>应用部署</li>
     <li class="wy-breadcrumbs-aside">
       
         
@@ -160,17 +166,21 @@
           <div role="main">
             <div class="section">
               
-                <p>AngularJS 是很流行的框架，有大量的模块可以直接利用。开发时利用已有资源可以大大缩短开发时间。</p>
-<p>下面介绍一些常用的模块：</p>
-<ul>
-<li>文件上传：<a href="https://github.com/danialfarid/ng-file-upload">ng-file-upload</a></li>
-<li>高级路由：<a href="https://github.com/angular-ui/ui-router">ui-router</a></li>
-</ul>
-<p>这些项目虽然不是 AngularJS 项目，但是整合起来也很容易：</p>
-<ul>
-<li>客户端存储：<a href="https://github.com/pouchdb/pouchdb">pouchdb</a></li>
-<li>日期控件：<a href="https://github.com/acidb/mobiscroll">mobiscroll</a></li>
-</ul>
+                <h2 id="_1">配置</h2>
+<p>修改tasks目录<strong>test-deploy.json</strong> | <strong>production-deploy.json</strong></p>
+<pre><code>{
+  &quot;host&quot;: &quot;192.168.0.53&quot;,--远程主机名
+  &quot;username&quot;: &quot;root&quot;,--用户名
+  &quot;password&quot;: &quot;******&quot;,--密码
+  &quot;path&quot;: &quot;/opt/buildapp/tmp/&quot;--发布目录
+}
+
+</code></pre>
+
+<h2 id="_2">发布</h2>
+<pre><code>grunt localDeploy --发布应用到本地测试环境
+grunt productDeploy --发布应用到正式环境
+</code></pre>
               
             </div>
           </div>
@@ -178,10 +188,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../cordova/" class="btn btn-neutral float-right" title="手机应用打包帮助">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../recommend/" class="btn btn-neutral float-right" title="推荐模块">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../deploy/" class="btn btn-neutral" title="应用部署"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../advenced/" class="btn btn-neutral" title="高级技巧"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -209,10 +219,10 @@
           <a href="https://github.com/ETENG-WIKI/static-html-builder" class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
-        <span><a href="../deploy/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../advenced/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../cordova/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../recommend/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
