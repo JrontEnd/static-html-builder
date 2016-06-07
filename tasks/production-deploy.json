@@ -1,0 +1,6 @@
+{
+  "host": "192.168.0.53",
+  "username": "root",
+  "password": "yiteng",
+  "path": "/opt/buildapp/tmp/"
+}

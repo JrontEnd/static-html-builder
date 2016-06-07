@@ -82,4 +82,16 @@ function gruntfile(grunt) {
 
   grunt.registerTask('default', ['serve']);
 
+  grunt.registerTask('localDeploy', [
+    'build',
+    'sshexec:testRemovePath',
+    'sftp:test'
+  ]);
+
+  grunt.registerTask('productDeploy', [
+    'build',
+    'sshexec:prductionRemovePath',
+    'sftp:production'
+  ]);
+
 }
