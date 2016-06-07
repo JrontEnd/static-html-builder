@@ -14,7 +14,7 @@ Static HTML Builder 是一个工具，不是项目。在项目开发过程中，
 
 ### 检出最新的 Static HTML Builder
 ```bash
-git clone https://github.com/gengen1988/static-html-builder
+git clone https://github.com/ETENG-WIKI/static-html-builder
 ```
 
 ### 建立项目文件夹

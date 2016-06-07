@@ -24,8 +24,7 @@
     "grunt-wiredep": "^2.0.0",
     "http-proxy": "^1.12.0",
     "load-grunt-tasks": "^1.0.0",
-    "ncp": "^2.0.0",
-    "grunt-ssh": "~0.4.0"
+    "ncp": "^2.0.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -33,14 +32,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gengen1988/static-html-builder.git"
+    "url": "https://github.com/ETENG-WIKI/static-html-builder.git"
   },
   "author": "Gen Liu",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/gengen1988/static-html-builder/issues"
+    "url": "https://github.com/ETENG-WIKI/static-html-builder/issues"
   },
-  "homepage": "https://github.com/gengen1988/static-html-builder",
+  "homepage": "https://github.com/ETENG-WIKI/static-html-builder",
   "devDependencies": {
     "grunt-ssh": "^0.12.9"
   }

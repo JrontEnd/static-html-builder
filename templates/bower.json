@@ -1,7 +1,7 @@
 {
   "name": "static-html-builder",
   "version": "3.1.4",
-  "homepage": "https://github.com/gengen1988/static-html-builder",
+  "homepage": "https://github.com/ETENG-WIKI/static-html-builder",
   "authors": [
     "Gen Liu <gerald_721@hotmail.com>"
   ],
@@ -31,7 +31,9 @@
     <% _.each(overrides, function (override, packageName) { %>
     "<%= packageName %>": {
       "main": <%= JSON.stringify(override) %>
-    }<% if (packageName !== _.last(_.keys(overrides))) { %>,<% } %>
+    }
+    <% if (packageName !== _.last(_.keys(overrides))) { %>,
+    <% } %>
     <% }); %>
   }
 }
