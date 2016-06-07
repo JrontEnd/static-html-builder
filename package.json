@@ -40,5 +40,8 @@
   "bugs": {
     "url": "https://github.com/gengen1988/static-html-builder/issues"
   },
-  "homepage": "https://github.com/gengen1988/static-html-builder"
+  "homepage": "https://github.com/gengen1988/static-html-builder",
+  "devDependencies": {
+    "grunt-ssh": "^0.12.9"
+  }
 }

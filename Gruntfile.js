@@ -21,11 +21,15 @@ function gruntfile(grunt) {
     'prepareBower',
     'copy:app',
     'copy:framework',
+    'copy:bootstrapFonts',
+    'copy:fontawesomeFonts',
+    'copy:cssimages',
+    'copy:cssselect2',
+    'copy:cssuigrid',
     'useminPrepare',
     'generated',
     'usemin',
-    'ngTemplate',
-    'copyFont'
+    'ngTemplate'
   ]);
 
   grunt.registerTask('generated', [
@@ -72,14 +76,6 @@ function gruntfile(grunt) {
     'shell:bowerInstall',
     'wiredep'
   ]);
-
-  grunt.registerTask('copyFont', [
-    'copy:bootstrapFonts',
-    'copy:fontawesomeFonts',
-    'copy:ioniconFonts',
-    'copy:icomoonFonts'
-  ]);
-
   grunt.registerTask('default', ['serve']);
 
   grunt.registerTask('localDeploy', [
@@ -93,5 +89,4 @@ function gruntfile(grunt) {
     'sshexec:prductionRemovePath',
     'sftp:production'
   ]);
-
 }

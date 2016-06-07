@@ -1,4 +1,4 @@
-module.exports = function (grunt) {
+module.exports = function(grunt) {
 
   grunt.config('copy', {
 
@@ -6,6 +6,9 @@ module.exports = function (grunt) {
       expand: true,
       cwd: '<%= config.app %>',
       src: [
+        'assets/**',
+        'data/**',
+        'fonts/**',
         '**/*.png',
         '**/*.jpg',
         '**/*.jpeg',
@@ -17,35 +20,45 @@ module.exports = function (grunt) {
 
     bootstrapFonts: {
       expand: true,
-      cwd: 'bower_components/bootstrap/dist',
-      src: 'fonts/*',
-      dest: '<%= config.dist %>'
+      cwd: 'bower_components/bootstrap/fonts',
+      src: '*',
+      dest: '<%= config.dist %>/fonts'
     },
 
     fontawesomeFonts: {
       expand: true,
-      cwd: 'bower_components/font-awesome',
-      src: 'fonts/*',
-      dest: '<%= config.dist %>'
+      cwd: 'bower_components/fontawesome/fonts',
+      src: '*',
+      dest: '<%= config.dist %>/fonts'
     },
-
-    ioniconFonts: {
-      expand: true,
-      cwd: 'bower_components/font-awesome',
-      src: 'fonts/*',
-      dest: '<%= config.dist %>'
-    },
-
-    icomoonFonts: {
-      expand: true,
-      cwd: 'bower_components/icomoon',
-      src: 'fonts/*',
-      dest: '<%= config.dist %>'
-    },
-
     framework: {
       src: "<%= config.generated %>/index-framework.html",
       dest: "<%= config.dist %>/index.html"
+    },
+    cssimages: {
+      expand: true,
+      cwd: "bower_components/jquery-ui/themes/base/images",
+      src: "*",
+      dest: "<%= config.dist %>/css/images"
+    },
+    cssselect2: {
+      expand: true,
+      cwd: "bower_components/select2",
+      src: [
+          '**/*.png',
+          '**/*.gif'
+      ],
+      dest: "<%= config.dist %>/css"
+    },
+    cssuigrid: {
+      expand: true,
+      cwd: "bower_components/angular-ui-grid",
+      src: [
+          '**/*.ttf',
+          '**/*.woff',
+          '**/*.svg'
+      ],
+      dest: "<%= config.dist %>/css"
     }
 
   });
