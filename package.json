@@ -41,6 +41,7 @@
   },
   "homepage": "https://github.com/ETENG-WIKI/static-html-builder",
   "devDependencies": {
+    "grunt-manifest": "^0.4.4",
     "grunt-ssh": "^0.12.9"
   }
 }

@@ -79,14 +79,47 @@ function gruntfile(grunt) {
   grunt.registerTask('default', ['serve']);
 
   grunt.registerTask('localDeploy', [
+    'init',
     'build',
     'sshexec:testRemovePath',
     'sftp:test'
   ]);
 
+  grunt.registerTask('ld', [
+    'localDeploy'
+  ]);
+
   grunt.registerTask('productDeploy', [
+    'init',
     'build',
     'sshexec:prductionRemovePath',
     'sftp:production'
+  ]);
+  grunt.registerTask('pd', [
+    'productDeploy'
+  ]);
+
+  grunt.registerTask('localDeployWithCache', [
+    'init',
+    'build',
+    'manifest',
+    'sshexec:testRemovePath',
+    'sftp:test'
+  ]);
+
+  grunt.registerTask('ldwc', [
+    'localDeployWithCache'
+  ]);
+
+  grunt.registerTask('productDeployWithCache', [
+    'init',
+    'build',
+    'manifest',
+    'sshexec:prductionRemovePath',
+    'sftp:production'
+  ]);
+
+  grunt.registerTask('pdwc', [
+    'productDeployWithCache'
   ]);
 }
