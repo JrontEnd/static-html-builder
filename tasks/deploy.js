@@ -4,7 +4,7 @@ module.exports = function(grunt) {
   var dirName = (new Date()).toLocaleDateString() + ".tar.gz";
   grunt.config('sshexec', {
     testRemovePath: {
-      command: ['tar -zcvf /opt/backup/' + testConfig.fileName + dirName + ' ' + testConfig.path, 'rm -rf ' + testConfig.path],
+      command: ['tar -zcvf ' + testConfig.fileName + dirName + ' ' + testConfig.path, 'rm -rf ' + testConfig.path],
       options: {
         host: testConfig.host,
         username: testConfig.username,
