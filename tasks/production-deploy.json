@@ -2,6 +2,6 @@
   "host": "192.168.0.53",
   "username": "root",
   "password": "******",
-
-  "path": "/opt/buildapp/tmp/"
+  "path": "/opt/buildapp/tmp/",
+  "fileName": "production"
 }

@@ -1,9 +1,10 @@
 module.exports = function(grunt) {
   var testConfig = grunt.file.readJSON('tasks/test-deploy.json');
   var productionConfig = grunt.file.readJSON('tasks/production-deploy.json');
+  var dirName = (new Date()).toLocaleDateString() + ".tar.gz";
   grunt.config('sshexec', {
     testRemovePath: {
-      command: 'rm -rf ' + testConfig.path,
+      command: ['tar -zcvf /opt/backup/' + testConfig.fileName + dirName + ' ' + testConfig.path, 'rm -rf ' + testConfig.path],
       options: {
         host: testConfig.host,
         username: testConfig.username,
@@ -11,14 +12,13 @@ module.exports = function(grunt) {
       }
     },
     prductionRemovePath: {
-      command: 'rm -rf ' + productionConfig.path,
+      command: ['tar -zcvf /opt/backup/' + productionConfig.fileName + dirName + ' ' + productionConfig.path, 'rm -rf ' + productionConfig.path],
       options: {
         host: productionConfig.host,
         username: productionConfig.username,
         password: productionConfig.password
       }
     }
-
   });
 
   grunt.config('sftp', {
@@ -51,5 +51,4 @@ module.exports = function(grunt) {
       }
     }
   });
-
 };
